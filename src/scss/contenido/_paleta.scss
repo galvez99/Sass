@@ -1,0 +1,95 @@
+@use '../base/variable' as v;
+@use '../base/mixins' as m;
+
+@include m.ajustar-contenedor-colores;
+@include m.ajustar-contenedor-colores-fade;
+
+.texto1 p, .texto2 p, .texto3 p, .texto4 p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.texto1 p b,
+.texto2 p b,
+.texto3 p b,
+.texto4 p b {
+  justify-content: flex-start;
+}
+
+.texto1 p span,
+.texto2 p span,
+.texto3 p span,
+.texto4 p span {
+  justify-content: flex-end;
+}
+
+.color1{
+    @include m.asignar-color2(color1);
+  }
+  
+.color2{
+  @include m.asignar-color2(color2);
+}
+
+.color3{
+  @include m.asignar-color2(color3);
+}
+
+.color4{
+  @include m.asignar-color2(color4);
+}
+
+
+.colorfade11{
+  @include m.asignar-color3(colorfade11);
+}
+
+.colorfade12{
+  @include m.asignar-color3(color1);
+}
+
+.colorfade13{
+  @include m.asignar-color3(colorfade13);
+}
+
+.colorfade21{
+  @include m.asignar-color3(colorfade21);
+}
+.colorfade22{
+  @include m.asignar-color3(color2);
+}
+  
+.colorfade23{
+  @include m.asignar-color3(colorfade23);
+}
+
+.colorfade31{
+  @include m.asignar-color3(colorfade31);
+}
+.colorfade32{
+  @include m.asignar-color3(color3);
+}
+  
+.colorfade33{
+  @include m.asignar-color3(colorfade33);
+}
+
+.colorfade41{
+  @include m.asignar-color3(colorfade41);
+}
+
+.colorfade42{
+  @include m.asignar-color3(color4);
+}
+
+.colorfade43{
+  @include m.asignar-color3(colorfade43)
+}
+
+.fadenombre{
+    display: flex;
+    justify-content: flex-start; 
+    margin-left: 10px;
+    gap: 280px;
+}
+

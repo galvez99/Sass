@@ -1,0 +1,45 @@
+@use '../base/variable' as v;
+@use '../base/mixins' as m;
+
+
+footer{
+    padding-bottom: 200px;
+    background-color: v.$fondonav;
+    padding: 2%;
+    height: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: v.$ordenador;
+    justify-content: v.$justificar;
+
+    a{
+        margin-top: -10px;
+        color: v.$azul;
+        text-decoration:none;
+    }
+
+    .derecha{
+        margin-right: 80px;
+    }
+
+    a:hover{
+        color: v.$rosa;
+        font-weight: v.$negrita;
+        background-color: v.$fondoblanco;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .derecha{
+            margin-right: 50px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+
+        .derecha{
+            margin-right: 30px;
+        }
+    }
+
+}

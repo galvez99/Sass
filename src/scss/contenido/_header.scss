@@ -1,0 +1,76 @@
+@use '../base/variable' as v;
+@use '../base/mixins' as m;
+
+h1, h2{
+    color: v.$rosa;
+}
+
+header{
+    display: v.$ordenador;
+}
+
+#titulos{
+    margin-left: 280px;
+}
+
+nav {
+    color: v.$azul;
+    margin-top: 20px;
+    background-color: v.$fondonav;
+    display: v.$ordenador;
+    justify-content: v.$justificar;
+    padding: 10px;
+}
+
+.left {
+    order: 1;
+}
+
+.center {
+    order: 2;
+}
+
+.right {
+    order: 3;
+}
+
+.left:hover, .center:hover, .right:hover{
+    color: v.$rosa;
+    font-weight: v.$negrita;
+    background-color: v.$fondoblanco;
+}
+
+@media screen and (max-width: 767px) {
+    header{
+        flex-direction: v.$movil; 
+        text-align: v.$centro;
+    }
+
+    #titulos{
+        margin-left: 0px;
+    }
+
+    #titulos{
+        flex-direction: v.$movil; 
+        align-items: v.$centro;
+    }
+
+    nav{
+        margin-top: 10px;
+        flex-direction: v.$movil; 
+        align-items: v.$centro;
+    }
+
+    .left, .center{
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .atras{
+        text-align: v.$centro;
+    }
+}
+
+

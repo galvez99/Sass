@@ -1,0 +1,136 @@
+@use '../base/variable' as v;
+
+@mixin coloresdinamicos($redesSociales) {
+    @if $redesSociales == "facebook" {
+        background-color: v.$fondoFacebook;
+    } @else if $redesSociales == "linkedin" {
+        background-color: v.$fondoLinkedin;
+    } @else if $redesSociales == "instagram" {
+        background-color: v.$fondoInstagram;
+    } @else if $redesSociales == "youtube" {
+        background-color: v.$fondoYoutube;
+    } @else if $redesSociales == "twitter" {
+        background-color: v.$fondoTwitter;
+    } @else if $redesSociales == "pinterest" {
+        background-color: v.$fondoPinterest;
+    }
+}
+
+@mixin imagenAjuste{
+    margin-left: 20px;
+    margin-top: 60px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+    max-width: 80px;
+    height: 80px;
+    @media (min-width: 768px) and (max-width: 991px) {
+        margin-left: 15px;
+         
+    }
+}
+
+@mixin contenedorAjuste{
+    height: 200px;
+}
+
+@mixin ajustarTexto{
+    padding-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        padding-top: 30px;
+        margin-left: 10px;
+        margin-right: 22px;
+    }
+    @media screen and (max-width: 767px) {
+        padding-top: 40px;
+        margin-left: 20px;
+        margin-right: 0px;
+    }
+}
+
+@mixin ajustar-contenedor-colores{
+    aside.color1, .color2, .color3, .color4, .texto1, .texto2, .texto3, .texto4{
+      max-width: 500px;
+      height: 50px;
+      margin: 10px;
+      padding-left: 5%;
+    }
+
+    .texto1, .texto2,.texto3, .texto4{
+        margin-top: -100px;
+    }
+
+    #tituloTonalidades{
+        margin-top: -100px;
+    }
+    .container2 {
+      flex-wrap: wrap;
+      display: flex;
+      margin-bottom: 10px;
+  
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+  
+        .col-md-4 {
+          height: 200px;
+          width: 340px;
+        }
+      }
+    }
+  }
+  
+  @mixin ajustar-contenedor-colores-fade {
+    .container3 {
+      height: 200px;
+    }
+
+    .fade1, .fade2, .fade3, .fade4 {
+      display: inline-flex;
+      margin: 10px;
+  
+      aside {
+        height: 30px;
+        width: 105px;
+      }
+    }
+  }
+
+  @mixin asignar-color2($paleta){
+  @if $paleta == "color1"{
+    background-color: v.$color1;
+  } @else if $paleta == "color2"{
+    background-color: v.$color2;
+  } @else if $paleta == "color3"{
+    background-color: v.$color3;
+  } @else if $paleta == "color4"{
+      background-color: v.$color4;}
+}
+
+@mixin asignar-color3($paletafade){
+  @if $paletafade == "colorfade11"{
+    background-color: v.$colorfade11;
+  } @else if $paletafade == "color1"{
+    background-color: v.$color1;
+  } @else if $paletafade == "colorfade13"{
+    background-color: v.$colorfade13;
+  } @else if $paletafade == "colorfade21"{
+      background-color: v.$colorfade21;
+  } @else if $paletafade == "color2"{
+    background-color: v.$color2;
+  } @else if $paletafade == "colorfade23"{
+    background-color: v.$colorfade23;
+  } @else if $paletafade == "colorfade31"{
+      background-color: v.$colorfade31;
+  } @else if $paletafade == "color3"{
+    background-color: v.$color3;
+  } @else if $paletafade == "colorfade33"{
+    background-color: v.$colorfade33;
+  } @else if $paletafade == "colorfade41"{
+      background-color: v.$colorfade41;
+  } @else if $paletafade == "color4"{
+    background-color: v.$color4;
+  } @else if $paletafade == "colorfade43"{
+    background-color: v.$colorfade43;
+  }
+}

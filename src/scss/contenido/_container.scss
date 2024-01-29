@@ -1,0 +1,77 @@
+@use '../base/variable' as v;
+@use '../base/mixins' as m;
+
+.facebook {
+    @include m.coloresdinamicos(facebook);
+}
+
+.linkedin{
+    @include m.coloresdinamicos(linkedin);
+}
+
+.instagram{
+    @include m.coloresdinamicos(instagram);
+}
+
+.youtube{
+    @include m.coloresdinamicos(youtube);
+}
+
+.twitter{
+    @include m.coloresdinamicos(twitter);
+}
+
+.pinterest{
+    @include m.coloresdinamicos(pinterest);
+}
+
+aside img {
+    @include m.imagenAjuste;
+}
+
+.segundo{
+    @include m.contenedorAjuste;
+}
+
+.texto{
+    @include m.ajustarTexto;
+}
+
+@media screen and (max-width: 767px) {
+    .pinterest {
+        margin-bottom: 100px;
+    }
+}
+
+nav{
+    margin-bottom: 15px;
+}
+
+#titulos2{
+    color: v.$rosa;
+    margin-left: 200px;
+    margin-top: 30px;
+}
+
+.atras:hover{
+    color: v.$rosa;
+    font-weight: v.$negrita;
+    background-color: v.$fondoblanco;
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #titulos2{
+        margin-left:60px; 
+    }
+
+    .atras{
+        margin-left: 350px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #titulos2{
+        margin-left:0px; 
+    }
+}
